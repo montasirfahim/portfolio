@@ -3,247 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Montasir Fahim - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
 
-    <nav class="navbar">
-        <div class="logo">Montasir Fahim</div>
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-item">Home</a></li>
-            <li><a href="#skills" class="nav-item">Skills</a></li>
-            <li><a href="#projects" class="nav-item">Projects</a></li>
-            <li><a href="#social" class="nav-item">Social Media</a></li>
-            <li><a href="#about" class="nav-item">About</a></li>
-            <li><a href="#contact" class="nav-item">Contact</a></li>
-        </ul>
-        <div class="hamburger">&#9776;</div> 
+    <nav class="navbar fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="#home" class="logo text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300 cursor-pointer">
+                Montasir Fahim
+            </a>
+            <ul class="nav-links hidden md:flex space-x-1">
+                <li><a href="#home" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Home</a></li>
+                <li><a href="#skills" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Skills</a></li>
+                <li><a href="#projects" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Projects</a></li>
+                <li><a href="#social" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Social</a></li>
+                <li><a href="#about" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">About</a></li>
+                <li><a href="#contact" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Contact</a></li>
+            </ul>
+            <div class="hamburger md:hidden text-2xl cursor-pointer text-cyan-400">
+                <i class="fas fa-bars"></i>
+            </div> 
+        </div>
     </nav>
 
-    <section id="home">
-        <div class="intro">
-            <h1 style="font-size: 60px;">Hey!, I'm Fahim</h1>
-            <br>
-            <p style="font-size: 18px">Welcome to my portfolio!</p>
-           <button class="btnHome" onclick="location.href='#social'">Get in Touch
-                <i class="fas fa-arrow-right"></i>
-            </button>
+    <section id="home" class="min-h-screen pt-20 flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center py-20">
+            <div class="intro text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                        Hey!, I'm Fahim
+                    </span>
+                </h1>
+                <p class="text-xl text-slate-300 mb-8"> Competetive Programmer | Full Stack Developer | Tech Enthusiast</p>
+                <p class="text-lg text-slate-400 mb-12 leading-relaxed">
+                    Building scalable web applications with modern technologies. Passionate about problem solving, learning, and creating amazing digital experiences.
+                </p>
+                <button onclick="location.href='#social'" class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+                    Get in Touch
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
 
+            <div class="imageHome flex justify-center" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-3xl"></div>
+                    <img src="assets/intro-section-illustration.png" alt="Hero Illustration" class="relative rounded-2xl max-w-md w-full object-cover">
+                </div>
+            </div>
         </div>
 
-        <div class="imageHome">
-            <img src="assets/intro-section-illustration.png">
-            
-        </div>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-
+        <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
     </section>
 
-    <section id="skills">
-        <h1>My Skills</h1>
-        <div class="separator"></div>
-
-        <div class="skills-container">
-            <div class="skill">
-                <label>Algorithmic Problem Solving with C++</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 50%;"></div>
-                </div>
-                <span>50%</span>
+    <section id="skills" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">My Skills</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="skill">
-                <label>OOP with Java</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 90%;"></div>
+            <div class="skills-container space-y-8">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Data Structure & Algorithm with C++</label>
+                        <span class="text-sm font-bold text-slate-300">65%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 65%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
                 </div>
-                <span>90%</span>
-            </div>
 
-            <div class="skill">
-                <label>Database (MySQL)</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 80%;"></div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Object Oriented Programming with Java</label>
+                        <span class="text-sm font-bold text-slate-300">90%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
                 </div>
-                <span>80%</span>
-            </div>
 
-            <div class="skill">
-                <label>Python Django</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 60%;"></div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Database Management System (MySQL)</label>
+                        <span class="text-sm font-bold text-slate-300">80%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 80%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
                 </div>
-                <span>60%</span>
-            </div>
 
-            <div class="skill">
-                <label>HTML, CSS</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 95%;"></div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Java Spring Boot</label>
+                        <span class="text-sm font-bold text-slate-300">90%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
                 </div>
-                <span>95%</span>
-            </div>
 
-            <div class="skill">
-                <label>Javascript</label>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 30%;"></div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Python Django</label>
+                        <span class="text-sm font-bold text-slate-300">60%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 60%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
                 </div>
-                <span>30%</span>
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">Flutter</label>
+                        <span class="text-sm font-bold text-slate-300">70%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 70%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex justify-between items-center mb-3">
+                        <label class="text-lg font-semibold text-cyan-400">HTML, CSS, Bootstrap, Tailwind & JavaScript</label>
+                        <span class="text-sm font-bold text-slate-300">90%</span>
+                    </div>
+                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
+                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
 
 
-    <section id="projects">
-        <h1 style="margin-bottom: 10px;">My Projects</h1>
-        <div class="separator"></div>
-
-
-        <div class="projects-container">
-
-            <a href="https://github.com/montasirfahim/Contest-App-using-Python-Django" target="_blank">
-            <div class="project"> 
-                <img src="assets/project-django.png" alt="Contest app Preview" class="project-img">
-                <p class="project-name">A Django Web Application</p>
-                <p class="project-desc">Web based Programming Contest Management application for any university to handle problem setting, submitting and approving.</p>
+    <section id="projects" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">My Projects</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
             </div>
-            </a>
 
-             <a href="https://github.com/montasirfahim/Portfolio" target="_blank">
-            <div class="project"> 
-                <img src="assets/project-portfolio.png" alt="Image not found" class="project-img">
-                <p class="project-name">My Portfolio</p>
-                 <p class="project-desc">This is my personal portfolio website to showcase my skills, projects and personal contact informations.</p>
-            </div>
-            </a>
-
-            <a href="https://github.com/montasirfahim/CGPA-Calculator-Web-Application" target="_blank">
-            <div class="project"> 
-                <img src="assets/project-cgpa.png" alt="CGPA Calculator" class="project-img">
-                <p class="project-name">CGPA Calculator</p>
-                <p class="project-desc">A Javascript Based Web Application which allows users to calculate their GPA and download a Grade Sheet as pdf</p>
-            </div>
-            </a>
-
-             <a href="https://github.com/montasirfahim/CPU-and-Disk-Scheduling-Simulator" target="_blank">
-            <div class="project"> 
-                <img src="assets/project-os.png" style="width:100%;" alt="Preview Image" class="project-img">
-                <p class="project-name">A JavaFx Desktop Application</p>
-                <p class="project-desc">CPU, Disk & Page Scheduling Simulator with Memory and Deadlock management Algorithm solver</p>
-            </div>
-            </a>
-
-
-        </div>
-
-    </section>
-
-    <section id="social">
-        <h1>My Social Media</h1>
-        <div class="separator"></div>
-
-        <div class="social-container">
-            
-                <a href="https://github.com/montasirfahim", target="_blank"> 
-                    <div class="icon"> 
-                        <i class="fa-brands fa-github"></i> 
-                        <p class="social-name">GitHub </p>
+            <div class="projects-container grid md:grid-cols-2 gap-8">
+                <a href="https://github.com/montasirfahim/Contest-App-using-Python-Django" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
+                        <img src="assets/project-django.png" alt="Contest app" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">A Django Web Application</h3>
+                        <p class="text-slate-400 mt-2">Web based Programming Contest Management application for any university to handle problem setting, submitting and approving.</p>
                     </div>
                 </a>
-            
-           
-            <a href="https://www.linkedin.com/in/montasirfahim/", target="_blank">
-                 <div class="icon"> 
-                    <i class="fa-brands fa-linkedin" style="color: #0077B5;"></i> 
-                    <p class="social-name">LinkedIn </p>
+
+                <a href="https://github.com/montasirfahim/Portfolio" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
+                        <img src="assets/project-portfolio.png" alt="Portfolio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">My Portfolio</h3>
+                        <p class="text-slate-400 mt-2">This is my personal portfolio website to showcase my skills, projects and personal contact informations.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/montasirfahim/CGPA-Calculator-Web-Application" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
+                        <img src="assets/project-cgpa.png" alt="CGPA Calculator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">CGPA Calculator</h3>
+                        <p class="text-slate-400 mt-2">A Javascript Based Web Application which allows users to calculate their GPA and download a Grade Sheet as pdf</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/montasirfahim/CPU-and-Disk-Scheduling-Simulator" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
+                        <img src="assets/project-os.png" alt="OS Simulator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">A JavaFx Desktop Application</h3>
+                        <p class="text-slate-400 mt-2">CPU, Disk & Page Scheduling Simulator with Memory and Deadlock management Algorithm solver</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-b from-slate-900 to-slate-950">
+        <div class="max-w-6xl mx-auto w-full">
+            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Connect With Me</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-4">Find me on these platforms</p>
+            </div>
+
+            <div class="social-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <a href="https://github.com/montasirfahim" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="0">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <i class="fa-brands fa-github text-3xl"></i>
+                        <p class="social-name text-sm mt-2">GitHub</p>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/montasirfahim/" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <i class="fa-brands fa-linkedin text-3xl text-blue-400"></i>
+                        <p class="social-name text-sm mt-2">LinkedIn</p>
+                    </div>
+                </a>
+
+                <a href="https://codeforces.com/profile/montasirfahim" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <img src="assets/code-forces.svg" alt="Codeforces" class="w-8 h-8 filter brightness-200">
+                        <p class="social-name text-sm mt-2">Codeforces</p>
+                    </div>
+                </a>
+
+                <a href="https://leetcode.com/u/montasirfahim/" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <img src="assets/leetcode.svg" alt="LeetCode" class="w-8 h-8 filter brightness-200">
+                        <p class="social-name text-sm mt-2">LeetCode</p>
+                    </div>
+                </a>
+
+                <a href="https://www.fiverr.com/montasir1128/buying?source=avatar_menu_profile" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <img src="assets/fiverr-icon.svg" alt="Fiverr" class="w-8 h-8 filter brightness-200">
+                        <p class="social-name text-sm mt-2">Fiverr</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/fahim.ffff" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
+                        <i class="fa-brands fa-facebook text-3xl text-blue-500"></i>
+                        <p class="social-name text-sm mt-2">Facebook</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-950">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">About Me</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-800/50 to-slate-700/30 p-8 rounded-2xl border border-cyan-500/20 backdrop-blur-sm" data-aos="fade-up" data-aos-duration="1000">
+                <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                    This is Fahim, currently studying in <span class="text-cyan-400 font-semibold">B.Sc(Engineering) in Information Technology</span> at 
+                    <a href="https://www.mbstu.ac.bd/" target="_blank" class="text-cyan-400 hover:text-blue-400 transition-colors font-semibold underline">
+                        Mawlana Bhashani Science and Technology University (MBSTU)
+                    </a>, 
+                    Tangail, Bangladesh.
+                </p>
+                
+                <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                    I'm a passionate developer with expertise in full-stack web development, competitive programming, and software engineering. I love solving complex problems and creating elegant solutions using modern technologies. When I'm not coding, you can find me exploring new frameworks and contributing to open-source projects.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.open('assets/resume.pdf', '_blank')" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-eye mr-2"></i>View My Resume
+                    </button>
+                    <button onclick="forceDownload()" class="px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </button>
                 </div>
-            </a>
-
-            <a href="https://codeforces.com/profile/montasirfahim" target="_blank">
-            <div class="icon"> 
-                <img src="assets/code-forces.svg" alt="Codeforces Logo" class="social-icon">
-                <p class="social-name">Codeforces</p>
             </div>
-            </a>
-
-            <a href="https://leetcode.com/u/montasirfahim/" target="_blank">
-            <div class="icon"> 
-                <img src="assets/leetcode.svg" alt="Leetcode Logo" class="social-icon">
-                <p class="social-name">Leetcode</p>
-            </div>
-            </a>
-
-            <a href="https://www.fiverr.com/montasir1128/buying?source=avatar_menu_profile" target="_blank">
-            <div class="icon"> 
-                <img src="assets/fiverr-icon.svg" alt="Fiverr-logo" class="social-icon">
-                <p class="social-name">Fiverr</p>
-            </div>
-            </a>
-
-            <a href="https://www.facebook.com/fahim.ffff" target="_blank">
-            <div class="icon"> 
-                <i class="fa-brands fa-facebook" style="color: #0866ff;"></i> 
-                <p class="social-name">Facebook</p>
-            </div>
-        </a>
-
-
-        </div>
-       
-    </section>
-
-    <section id="about">
-        <h1 style="margin-bottom: 10px;">About Me</h1>
-        <div class="separator"></div>
-        <p style="font-size: 1.1rem;">This is Fahim, currently studying in B.Sc(Engineering) in Information Technology at 
-            <a href="https://www.mbstu.ac.bd/" target="_blank" style="text-decoration: none; color: wheat;">
-            <b>Mawlana Bhashani Science and Technology University(MBSTU),</b> </a>
-            Tangail, Bangladesh.
-        </p>
-        <h4 style="margin-top: 40px;">If you would like to know more about me: </h4>
-
-        <div class="btnAbout">
-             <button class="btnHome" onclick="window.open('assets/resume.pdf', '_blank')">
-                View My Resume <i class="fa-solid fa-eye"></i>
-            </button>
-
-          <button class="btnHome" onclick="forceDownload()">
-            Download My Resume <i class="fa-solid fa-download"></i>
-        </button>
-
         </div>
     </section>
 
-    <section id="contact">
-        <h1 style="margin-bottom: 10px;">Contact Me</h1>
-        <div class="separator"></div>
-        <p>Feel free to reach out by filling out the form below, and I will get back to you as soon as possible!</p>
+    <section id="contact" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div class="max-w-2xl mx-auto w-full">
+            <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-4 text-lg">Feel free to reach out. I'm always open to new opportunities and collaborations!</p>
+            </div>
 
-        <form action="https://formspree.io/f/xvgzrkgr" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="Your Email">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+            <form action="https://formspree.io/f/xvgzrkgr" method="POST" class="contact-form bg-gradient-to-br from-slate-800/50 to-slate-700/30 p-8 rounded-2xl border border-cyan-500/20 backdrop-blur-sm" data-aos="fade-up" data-aos-duration="1000">
+                <div class="form-group mb-6">
+                    <label for="name" class="block text-cyan-400 font-semibold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors">
+                </div>
+
+                <div class="form-group mb-6">
+                    <label for="email" class="block text-cyan-400 font-semibold mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors">
+                </div>
+
+                <div class="form-group mb-8">
+                    <label for="message" class="block text-cyan-400 font-semibold mb-2">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Type your message here..." class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors resize-none" rows="6"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-paper-plane mr-2"></i>Send Message
+                </button>
+            </form>
+        </div>
     </section>
 
+    <footer class="bg-slate-950/80 border-t border-cyan-500/20 py-8 px-4 text-center text-slate-400">
+        <p class="mb-2">© 2026 Montasir Fahim. All rights reserved.</p>
+        <p class="text-sm">Source Code: <a href="https://github.com/montasirfahim/Portfolio" target="_blank" class="text-cyan-400 hover:text-blue-400 font-semibold transition-colors duration-300 underline hover:no-underline">Github Repository</a></p>
+    </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
