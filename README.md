@@ -3,7 +3,7 @@
 A modern, sleek dark-themed portfolio website built with **Tailwind CSS** and **AOS animations**. Showcasing skills, projects, and professional achievements with ultra-modern UI design.
 
 ## Live Demo
-[Click Here to Visit](https://montasirfahim.github.io/Portfolio/)
+[Click Here to Visit](https://montasirfahim.github.io/portfolio/)
 
 ## Features
 
