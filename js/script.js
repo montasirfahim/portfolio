@@ -1,76 +1,121 @@
-AOS.init({
-    duration: 1000,
-    easing: 'ease-in-out',
-    once: false,
-    mirror: true,
-    offset: 100
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('[data-menu-toggle]');
+    const navLinks = document.querySelector('[data-nav-links]');
+    const links = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = document.querySelectorAll('main section[id]');
 
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-links a");
+    if (window.lucide) lucide.createIcons();
 
-    const highlightActiveLink = () => {
-        let current = "";
-        
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 100;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
-            }
-        });
+    const roleLine = document.querySelector('[data-roles]');
+    if (roleLine) {
+        const roles = JSON.parse(roleLine.dataset.roles);
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let deleting = true;
 
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").slice(1) === current) {
-                link.classList.add("active");
-            }
-        });
-    };
-
-    highlightActiveLink();
-    
-    window.addEventListener("scroll", highlightActiveLink);
-    
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute("href").slice(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: "smooth" });
-                const hamburger = document.querySelector(".hamburger");
-                const navLinksList = document.querySelector(".nav-links");
-                if (hamburger && navLinksList) {
-                    navLinksList.classList.remove("flex");
-                    navLinksList.classList.add("hidden");
+        const typeRole = () => {
+            const targetRole = roles[roleIndex];
+            if (deleting) {
+                characterIndex -= 1;
+                roleLine.textContent = targetRole.slice(0, characterIndex);
+                if (characterIndex === 0) {
+                    deleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+            } else {
+                characterIndex += 1;
+                roleLine.textContent = roles[roleIndex].slice(0, characterIndex);
+                if (characterIndex === roles[roleIndex].length) {
+                    deleting = true;
+                    setTimeout(typeRole, 1700);
+                    return;
                 }
             }
-        });
+            setTimeout(typeRole, deleting ? 55 : 90);
+        };
+
+        setTimeout(typeRole, 1700);
+    }
+
+    menuToggle?.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.innerHTML = `<i data-lucide="${isOpen ? 'x' : 'menu'}"></i>`;
+        lucide.createIcons();
     });
-});
 
-const hamburger = document.querySelector(".hamburger");
-const navLinksList = document.querySelector(".nav-links");
+    links.forEach((link) => link.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+    }));
 
-if (hamburger) {
-    hamburger.addEventListener("click", () => {
-        if (navLinksList.classList.contains("hidden")) {
-            navLinksList.classList.remove("hidden");
-            navLinksList.classList.add("flex", "absolute", "top-20", "left-0", "w-full", "flex-col", "bg-slate-950/95", "backdrop-blur-md", "border-b", "border-cyan-500/20", "z-40");
-        } else {
-            navLinksList.classList.add("hidden");
-            navLinksList.classList.remove("flex", "absolute", "top-20", "left-0", "w-full", "flex-col", "bg-slate-950/95", "backdrop-blur-md", "border-b", "border-cyan-500/20", "z-40");
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            links.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    sections.forEach((section) => sectionObserver.observe(section));
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const counter = entry.target;
+            const target = Number(counter.dataset.count);
+            let current = 0;
+            const step = Math.max(1, Math.ceil(target / 45));
+            const tick = () => {
+                current = Math.min(current + step, target);
+                counter.textContent = `${current.toLocaleString()}+`;
+                if (current < target) requestAnimationFrame(tick);
+            };
+            tick();
+            observer.unobserve(counter);
+        });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach((counter) => counterObserver.observe(counter));
+
+    const contactForm = document.querySelector('[data-contact-form]');
+    const formStatus = document.querySelector('[data-form-status]');
+    const submitButton = document.querySelector('[data-submit-button]');
+
+    contactForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+
+        const fields = [...contactForm.querySelectorAll('input, textarea')];
+        const invalidFields = fields.filter((field) => !field.value.trim() || (field.type === 'email' && !field.validity.valid));
+        fields.forEach((field) => field.classList.toggle('invalid', invalidFields.includes(field)));
+
+        if (invalidFields.length) {
+            formStatus.classList.add('error');
+            formStatus.textContent = 'Please complete every field with valid information.';
+            invalidFields[0].focus();
+            return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.firstChild.textContent = 'Sending... ';
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { Accept: 'application/json' }
+            });
+
+            if (!response.ok) throw new Error('Message submission failed.');
+            formStatus.classList.add('success');
+            formStatus.textContent = 'Message sent successfully!';
+            contactForm.reset();
+            fields.forEach((field) => field.classList.remove('invalid'));
+        } catch (error) {
+            formStatus.classList.add('error');
+            formStatus.textContent = 'Unable to send right now. Please use the direct email button.';
+        } finally {
+            submitButton.disabled = false;
+            submitButton.firstChild.textContent = 'Send message ';
         }
     });
-}
-
-function forceDownload() {
-    const link = document.createElement('a');
-    link.href = 'assets/resume.pdf';
-    link.download = 'Montasir_Fahim_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+});

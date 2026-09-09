@@ -3,335 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montasir Fahim - Full Stack Developer</title>
+    <meta name="description" content="Montasir Fahim is a backend-focused full-stack developer and competitive programmer.">
+    <title>Montasir Fahim | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
-
-    <nav class="navbar fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-            <a href="#home" class="logo text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300 cursor-pointer">
-                Montasir Fahim
-            </a>
-            <ul class="nav-links hidden md:flex space-x-1">
-                <li><a href="#home" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Home</a></li>
-                <li><a href="#skills" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Skills</a></li>
-                <li><a href="#projects" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Projects</a></li>
-                <li><a href="#social" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Social</a></li>
-                <li><a href="#about" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">About</a></li>
-                <li><a href="#contact" class="nav-item px-4 py-2 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300">Contact</a></li>
-            </ul>
-            <div class="hamburger md:hidden text-2xl cursor-pointer text-cyan-400">
-                <i class="fas fa-bars"></i>
-            </div> 
+<body>
+    <nav class="site-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a class="brand" href="#about"><span>MF</span><strong>montasir<span>.dev</span></strong></a>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle><i data-lucide="menu"></i></button>
+            <div class="nav-links" data-nav-links>
+                <a href="#about">About</a><a href="#metrics">Metrics</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#education">Education</a><a class="nav-cta" href="#contact">Let's talk <i data-lucide="arrow-up-right"></i></a>
+            </div>
         </div>
     </nav>
-
-    <section id="home" class="min-h-screen pt-20 flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center py-20">
-            <div class="intro text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                        Hey!, I'm Fahim
-                    </span>
-                </h1>
-                <p class="text-xl text-slate-300 mb-8"> Competetive Programmer | Full Stack Developer | Tech Enthusiast</p>
-                <p class="text-lg text-slate-400 mb-12 leading-relaxed">
-                    Building scalable web applications with modern technologies. Passionate about problem solving, learning, and creating amazing digital experiences.
-                </p>
-                <button onclick="location.href='#social'" class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-                    Get in Touch
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </button>
+    <main>
+        <section class="hero section-shell" id="home">
+            <div class="hero-copy reveal">
+                <p class="kicker">Backend systems / competitive programming</p>
+                <h1><span class="role-prefix">I'm a</span> <em class="role-line" data-roles='["Full-Stack Software Engineer","Competitive Programmer"]'>Full-Stack Software Engineer</em></h1>
+                <p class="hero-text">Designing robust backend architectures, high-performance APIs, and algorithmic solutions.</p>
+                <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <i data-lucide="arrow-down-right"></i></a><a class="button button-ghost" href="#contact">Start a conversation <i data-lucide="mail"></i></a></div>
+                <div class="hero-meta"><span><i data-lucide="map-pin"></i> Dhaka, Bangladesh</span><span><i data-lucide="sparkles"></i> Open to meaningful work</span></div>
             </div>
-
-            <div class="imageHome flex justify-center" data-aos="fade-left" data-aos-duration="1000">
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-3xl"></div>
-                    <img src="assets/intro-section-illustration.png" alt="Hero Illustration" class="relative rounded-2xl max-w-md w-full object-cover">
-                </div>
+            <div class="hero-visual reveal delay-1">
+                <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                <div class="terminal-card"><div class="terminal-bar"><span></span><span></span><span></span><small>fahim@portfolio ~ %</small></div><div class="terminal-body"><p><b>const</b> developer = {</p><p class="indent"><span>focus:</span> <i>'backend systems'</i>,</p><p class="indent"><span>craft:</span> <i>'full-stack products'</i>,</p><p class="indent"><span>mindset:</span> <i>'always learning'</i></p><p>};</p><p class="terminal-cursor">_</p></div></div>
+                <div class="visual-label label-top"><i data-lucide="braces"></i><span>clean abstractions</span></div><div class="visual-label label-bottom"><i data-lucide="git-branch"></i><span>ship with purpose</span></div>
             </div>
-        </div>
-
-        <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
-        <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
-    </section>
-
-    <section id="skills" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-        <div class="max-w-4xl mx-auto w-full">
-            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
-                <h1 class="text-5xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">My Skills</span>
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+        </section>
+            <section class="about-card section-shell" id="about">
+                <div class="about-panel glass-card reveal">
+                    <div class="about-copy">
+                        <p class="kicker">About me</p>
+                        <h2>Engineering with <em>depth and purpose.</em></h2>
+                    </div>
+                    <div class="about-points">
+                        <article class="about-point"><span class="about-point-icon"><i data-lucide="rocket"></i></span><div><h3>Development</h3><p>Backend-focused full-stack developer and competitive programmer with an ICPC background and production experience serving 1,000+ users.</p></div></article>
+                        <article class="about-point"><span class="about-point-icon"><i data-lucide="layers-3"></i></span><div><h3>Core technology</h3><p>I work with Spring Boot, Django, and FastAPI to build reliable APIs, automation workflows, and practical user-facing products.</p></div></article>
+                        <article class="about-point"><span class="about-point-icon"><i data-lucide="brain-circuit"></i></span><div><h3>AI/ML interests</h3><p>I am exploring RAG, AI/ML, NLP, and data engineering while actively learning and improving in these areas.</p></div></article>
+                    </div>
+                </div>
+            </section>
+        
+        <section class="metrics section-shell" id="metrics"><div class="section-heading reveal"><p class="kicker">01 / Competitive edge</p><h2>Proof in the <em>numbers.</em></h2><p>Competition taught me to think precisely. Production taught me to make that precision useful.</p></div><div class="metric-grid reveal delay-1"><div class="metric-card"><span class="metric-icon"><i data-lucide="target"></i></span><strong data-count="1600">0</strong><span>Algorithmic problems solved</span><small>Across multiple online judges</small></div><div class="metric-card"><span class="metric-icon"><i data-lucide="users"></i></span><strong data-count="1000">0</strong><span>active users served</span><small>Through live production systems</small></div><div class="metric-card"><span class="metric-icon"><i data-lucide="trophy"></i></span><strong>ICPC</strong><span>Regionalist 2025</span><small>Asia Dhaka Regional</small></div></div></section>
+        <section class="competition section-shell"><div class="section-heading reveal"><p class="kicker">02 / The competitive programming</p><h2>Always learning. <em>Always testing.</em></h2></div><div class="rating-grid reveal delay-1"><a class="rating-card" href="https://codeforces.com/profile/montasirfahim" target="_blank" rel="noreferrer"><span>Codeforces</span><strong>1374</strong><small>max rating <i data-lucide="arrow-up-right"></i></small></a><a class="rating-card" href="#contact"><span>CodeChef</span><strong>1594</strong><small>max rating <i data-lucide="arrow-up-right"></i></small></a><a class="rating-card" href="https://leetcode.com/u/montasirfahim/" target="_blank" rel="noreferrer"><span>LeetCode</span><strong>1868</strong><small>top 5% globally <i data-lucide="arrow-up-right"></i></small></a></div><div class="onsite reveal delay-2"><span class="onsite-title">Onsite contest</span><div class="badge-list"><span>ACM ICPC Asia Dhaka Regional 2025</span><span>SUST IUPC 2026</span><span>DUET IUPC 2026</span><span>NSU IUPC 2026</span><span>NDUB IUPC 2026</span></div></div></section>
+        <section class="skills section-shell" id="skills"><div class="section-heading reveal"><p class="kicker">03 / The toolkit</p><h2>Built for the <em>hard parts.</em></h2></div><div class="skill-grid reveal delay-1"><article class="glass-card skill-panel"><i data-lucide="server"></i><h3>Backend &amp; Database</h3><div class="pill-list"><span>Java (Spring Boot - JPA/MVC)</span><span>Python (Django DRF, FastAPI)</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span><span>Redis</span></div></article><article class="glass-card skill-panel"><i data-lucide="code-2"></i><h3>Languages &amp; Core</h3><div class="pill-list"><span>C++</span><span>Java</span><span>Python</span><span>JavaScript</span><span>OOP</span><span>DSA</span><span>RDBMS</span></div></article><article class="glass-card skill-panel"><i data-lucide="layout-template"></i><h3>Frontend &amp; UI</h3><div class="pill-list"><span>HTML</span><span>CSS</span><span>Tailwind CSS</span><span>Bootstrap</span></div></article><article class="glass-card skill-panel"><i data-lucide="container"></i><h3>DevOps &amp; Tools</h3><div class="pill-list"><span>Docker</span><span>Git</span><span>GitHub Actions</span><span>Postman</span><span>Linux</span></div></article></div></section>
+        <section class="projects section-shell" id="projects"><div class="section-heading reveal"><p class="kicker">04 / Selected work</p><h2>Systems with a <em>reason to exist.</em></h2><p>A few projects where technical decisions translated into measurable outcomes.</p></div><div class="project-grid reveal delay-1">
+            <!-- Replace the placeholder URLs below with your real repository and deployment links. -->
+            <article class="project-card glass-card"><div class="project-top"><span class="project-number">01</span><span class="highlight">Production System</span></div><h3>Academics &amp; Billing Automation Software</h3><div class="project-pills"><span>Spring Boot</span><span>Java</span><span>MySQL</span><span>Docker</span><span>iText PDF</span><span>Brevo API</span><span>Bootstrap</span></div><ul><li>Architected full-stack workflow automation saving 100+ administrative hours per semester.</li><li>Built role-based access control with BCrypt, email OTP 2FA, and automated PDF report distribution via Brevo REST API.</li></ul><div class="project-links"><a href="https://github.com/montasirfahim/academics-and-billing-automation" target="_blank" rel="noreferrer">GitHub Repo <i data-lucide="github"></i></a><a href="https://academics-and-billing-automation.onrender.com/" target="_blank" rel="noreferrer">Live Demo <i data-lucide="external-link"></i></a></div></article>
+            <article class="project-card glass-card"><div class="project-top"><span class="project-number">02</span><span class="highlight violet">Hackathon Finalist</span></div><h3>Fin-SupportOps - AI Support Assistant</h3><div class="project-pills"><span>FastAPI</span><span>LLMs</span><span>Tailwind CSS</span><span>JavaScript</span><span>Rule-Based Engine</span></div><ul><li>AI-powered support assistant leveraging LLMs with strict schema validation, reducing resolution time by 50%.</li><li>Built intelligent intent detection and multi-language routing with automated fallback logic.</li></ul><div class="project-links"><a href="https://github.com/montasirfahim/fin-supportops" target="_blank" rel="noreferrer">GitHub Repo <i data-lucide="github"></i></a><a href="https://fin-supportops.onrender.com/" target="_blank" rel="noreferrer">Live Demo <i data-lucide="external-link"></i></a></div></article>
+            <article class="project-card glass-card"><div class="project-top"><span class="project-number">03</span><span class="highlight cyan">Enterprise Solution</span></div><h3>ARMS - AI-Enabled ERP</h3><div class="project-pills"><span>Django DRF</span><span>FastAPI</span><span>GROQ LLM</span><span>MySQL</span><span>ReportLab</span><span>GitHub Actions</span></div><ul><li>Reduced M.Sc result report generation time by 90% using programmatic ReportLab PDF engines.</li><li>Integrated GROQ LLM assistant enabling 20+ faculty members to natural-language query database records.</li></ul><div class="project-links"><a href="https://github.com/montasirfahim/arms-hybrid-erp" target="_blank" rel="noreferrer">GitHub Repo <i data-lucide="github"></i></a><a href="https://arms-hybrid-erp.onrender.com/" target="_blank" rel="noreferrer">Live Demo <i data-lucide="external-link"></i></a></div></article>
+            <article class="project-card glass-card"><div class="project-top"><span class="project-number">04</span><span class="highlight">1,000+ Active Users</span></div><h3>My MBSTU - Campus Utility App</h3><div class="project-pills"><span>Flutter</span><span>Dart</span><span>Firebase</span><span>Node.js Cloud Functions</span></div><ul><li>Cross-platform utility app serving 1,000+ active students with notices, job alerts, and tuition tracking.</li><li>Built role-based student/admin portal with push notifications powered by Node.js cloud triggers.</li></ul><div class="project-links"><a href="https://github.com/your-username/project4" target="_blank" rel="noreferrer">GitHub Repo <i data-lucide="github"></i></a><a href="https://mymbstu.web.app/" target="_blank" rel="noreferrer">Live Demo <i data-lucide="external-link"></i></a></div></article>
+        </div></section>
+        <section class="leadership section-shell" id="leadership"><div class="section-heading reveal"><p class="kicker">05 / Beyond the code</p><h2>Share knowledge. <em>Raise the room.</em></h2></div><div class="leadership-grid reveal delay-1"><article class="glass-card leadership-card"><span>01</span><i data-lucide="presentation"></i><div><h3>Competitive Programming Mentor</h3><p>Conducts 2 weekly lab sessions for DSA and first-year students.</p></div></article><article class="glass-card leadership-card"><span>02</span><i data-lucide="lightbulb"></i><div><h3>Problem Setter &amp; Organizer</h3><p>Authored 3+ original contest problems and hosted 10+ departmental programming contests.</p></div></article></div></section>
+        
+        <section class="education section-shell" id="education">
+            <div class="section-heading reveal">
+                <p class="kicker">06 / Academic path</p>
+                <h2>A foundation built around <em>curiosity.</em></h2>
+                <p>Each step brought me closer to the intersection of mathematics, computer science, and competitive programming.</p>
             </div>
-
-            <div class="skills-container space-y-8">
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Data Structure & Algorithm with C++</label>
-                        <span class="text-sm font-bold text-slate-300">65%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 65%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Object Oriented Programming with Java</label>
-                        <span class="text-sm font-bold text-slate-300">90%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Database Management System (MySQL)</label>
-                        <span class="text-sm font-bold text-slate-300">80%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 80%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Java Spring Boot</label>
-                        <span class="text-sm font-bold text-slate-300">90%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Python Django</label>
-                        <span class="text-sm font-bold text-slate-300">60%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 60%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">Flutter</label>
-                        <span class="text-sm font-bold text-slate-300">70%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 70%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-lg font-semibold text-cyan-400">HTML, CSS, Bootstrap, Tailwind & JavaScript</label>
-                        <span class="text-sm font-bold text-slate-300">90%</span>
-                    </div>
-                    <div class="progress bg-slate-800 rounded-full overflow-hidden h-3">
-                        <div class="progress-bar bg-gradient-to-r from-cyan-400 to-blue-500 h-full rounded-full" style="width: 90%;animation: slideIn 1.5s ease-out forwards;"></div>
-                    </div>
-                </div>
-
+            <div class="education-timeline reveal delay-1">
+                <article class="education-item glass-card">
+                    <span class="education-period">Jan 2023 - Mar 2027</span>
+                    <div><h3>B.Sc. (Engg.) in Information &amp; Communication Technology</h3><p>Mawlana Bhashani Science and Technology University</p><small>Current degree · Expected graduation March 2027</small></div>
+                </article>
+                <article class="education-item glass-card">
+                    <span class="education-period">Nov 2021 - Nov 2022</span>
+                    <div><h3>B.Sc. (Hons) in Mathematics</h3><p>University of Rajshahi</p><small>Academic foundation in mathematical reasoning, *left to explore computer science</small></div>
+                </article>
+                <article class="education-item glass-card">
+                    <span class="education-period">2020</span>
+                    <div><h3>Higher Secondary Certificate</h3><p>Dhaka City College | Group: Science</p><small>Completed higher secondary education</small></div>
+                </article>
             </div>
-        </div>
-    </section>
-
-
-
-    <section id="projects" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
-                <h1 class="text-5xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">My Projects</span>
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto rounded-full"></div>
+        </section>
+        
+        <section class="contact section-shell" id="contact">
+            <div class="contact-panel contact-layout reveal">
+                <div class="contact-intro"><p class="kicker">Have a problem worth solving?</p><h2>Let's build something <em>useful.</em></h2><p>Send a message and I will get back to you as soon as possible.</p><a class="button button-ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=montasirtuhin1128@gmail.com" target="_blank" rel="noreferrer"><i data-lucide="mail"></i> Email directly</a></div>
+                <!-- Replace the Formspree action with your own endpoint if needed. -->
+                <form class="contact-form" action="https://formspree.io/f/mvkovlzg" method="POST" data-contact-form novalidate>
+                    <div class="form-grid"><label>Name<input type="text" name="name" autocomplete="name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div>
+                    <label>Subject<input type="text" name="subject" required></label>
+                    <label>Message<textarea name="message" rows="5" required></textarea></label>
+                    <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+                    <button class="button button-primary submit-button" type="submit" data-submit-button>Send message <i data-lucide="send"></i></button>
+                </form>
             </div>
+        </section>
 
-            <div class="projects-container grid md:grid-cols-2 gap-8">
-                <a href="https://github.com/montasirfahim/Contest-App-using-Python-Django" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="0">
-                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
-                        <img src="assets/project-django.png" alt="Contest app" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">A Django Web Application</h3>
-                        <p class="text-slate-400 mt-2">Web based Programming Contest Management application for any university to handle problem setting, submitting and approving.</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/montasirfahim/Portfolio" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
-                        <img src="assets/project-portfolio.png" alt="Portfolio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">My Portfolio</h3>
-                        <p class="text-slate-400 mt-2">This is my personal portfolio website to showcase my skills, projects and personal contact informations.</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/montasirfahim/CGPA-Calculator-Web-Application" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
-                        <img src="assets/project-cgpa.png" alt="CGPA Calculator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">CGPA Calculator</h3>
-                        <p class="text-slate-400 mt-2">A Javascript Based Web Application which allows users to calculate their GPA and download a Grade Sheet as pdf</p>
-                    </div>
-                </a>
-
-                <a href="https://github.com/montasirfahim/CPU-and-Disk-Scheduling-Simulator" target="_blank" class="project-card group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="relative overflow-hidden rounded-xl h-80 bg-slate-800 shadow-xl group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all duration-300">
-                        <img src="assets/project-os.png" alt="OS Simulator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div class="mt-4">
-                        <h3 class="text-xl font-bold text-cyan-400 group-hover:text-blue-400 transition-colors">A JavaFx Desktop Application</h3>
-                        <p class="text-slate-400 mt-2">CPU, Disk & Page Scheduling Simulator with Memory and Deadlock management Algorithm solver</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="social" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-b from-slate-900 to-slate-950">
-        <div class="max-w-6xl mx-auto w-full">
-            <div class="text-center mb-16" data-aos="zoom-in" data-aos-duration="1000">
-                <h1 class="text-5xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Connect With Me</span>
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
-                <p class="text-slate-400 mt-4">Find me on these platforms</p>
-            </div>
-
-            <div class="social-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <a href="https://github.com/montasirfahim" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="0">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <i class="fa-brands fa-github text-3xl"></i>
-                        <p class="social-name text-sm mt-2">GitHub</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/montasirfahim/" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <i class="fa-brands fa-linkedin text-3xl text-blue-400"></i>
-                        <p class="social-name text-sm mt-2">LinkedIn</p>
-                    </div>
-                </a>
-
-                <a href="https://codeforces.com/profile/montasirfahim" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <img src="assets/code-forces.svg" alt="Codeforces" class="w-8 h-8 filter brightness-200">
-                        <p class="social-name text-sm mt-2">Codeforces</p>
-                    </div>
-                </a>
-
-                <a href="https://leetcode.com/u/montasirfahim/" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <img src="assets/leetcode.svg" alt="LeetCode" class="w-8 h-8 filter brightness-200">
-                        <p class="social-name text-sm mt-2">LeetCode</p>
-                    </div>
-                </a>
-
-                <a href="https://www.fiverr.com/montasir1128/buying?source=avatar_menu_profile" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="400">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <img src="assets/fiverr-icon.svg" alt="Fiverr" class="w-8 h-8 filter brightness-200">
-                        <p class="social-name text-sm mt-2">Fiverr</p>
-                    </div>
-                </a>
-
-                <a href="https://www.facebook.com/fahim.ffff" target="_blank" class="social-card group" data-aos="zoom-in-up" data-aos-delay="500">
-                    <div class="icon bg-gradient-to-br from-slate-800 to-slate-700 hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/50">
-                        <i class="fa-brands fa-facebook text-3xl text-blue-500"></i>
-                        <p class="social-name text-sm mt-2">Facebook</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-950">
-        <div class="max-w-4xl mx-auto w-full">
-            <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
-                <h1 class="text-5xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">About Me</span>
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
-            </div>
-
-            <div class="bg-gradient-to-br from-slate-800/50 to-slate-700/30 p-8 rounded-2xl border border-cyan-500/20 backdrop-blur-sm" data-aos="fade-up" data-aos-duration="1000">
-                <p class="text-lg text-slate-300 leading-relaxed mb-6">
-                    This is Fahim, currently studying in <span class="text-cyan-400 font-semibold">B.Sc(Engineering) in Information Technology</span> at 
-                    <a href="https://www.mbstu.ac.bd/" target="_blank" class="text-cyan-400 hover:text-blue-400 transition-colors font-semibold underline">
-                        Mawlana Bhashani Science and Technology University (MBSTU)
-                    </a>, 
-                    Tangail, Bangladesh.
-                </p>
-                
-                <p class="text-lg text-slate-300 leading-relaxed mb-8">
-                    I'm a passionate developer with expertise in full-stack web development, competitive programming, and software engineering. I love solving complex problems and creating elegant solutions using modern technologies. When I'm not coding, you can find me exploring new frameworks and contributing to open-source projects.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="window.open('assets/resume.pdf', '_blank')" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-eye mr-2"></i>View My Resume
-                    </button>
-                    <button onclick="forceDownload()" class="px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
-                        <i class="fas fa-download mr-2"></i>Download Resume
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="min-h-screen py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <div class="max-w-2xl mx-auto w-full">
-            <div class="text-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
-                <h1 class="text-5xl font-bold mb-4">
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</span>
-                </h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
-                <p class="text-slate-400 mt-4 text-lg">Feel free to reach out. I'm always open to new opportunities and collaborations!</p>
-            </div>
-
-            <form action="https://formspree.io/f/xvgzrkgr" method="POST" class="contact-form bg-gradient-to-br from-slate-800/50 to-slate-700/30 p-8 rounded-2xl border border-cyan-500/20 backdrop-blur-sm" data-aos="fade-up" data-aos-duration="1000">
-                <div class="form-group mb-6">
-                    <label for="name" class="block text-cyan-400 font-semibold mb-2">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors">
-                </div>
-
-                <div class="form-group mb-6">
-                    <label for="email" class="block text-cyan-400 font-semibold mb-2">Your Email</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com" class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors">
-                </div>
-
-                <div class="form-group mb-8">
-                    <label for="message" class="block text-cyan-400 font-semibold mb-2">Your Message</label>
-                    <textarea id="message" name="message" required placeholder="Type your message here..." class="w-full px-4 py-3 bg-slate-900/50 border border-cyan-500/30 rounded-lg focus:outline-none focus:border-cyan-500 text-slate-100 placeholder-slate-500 transition-colors resize-none" rows="6"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-paper-plane mr-2"></i>Send Message
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950/80 border-t border-cyan-500/20 py-8 px-4 text-center text-slate-400">
-        <p class="mb-2">© 2026 Montasir Fahim. All rights reserved.</p>
-        <p class="text-sm">Source Code: <a href="https://github.com/montasirfahim/Portfolio" target="_blank" class="text-cyan-400 hover:text-blue-400 font-semibold transition-colors duration-300 underline hover:no-underline">Github Repository</a></p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        
+    </main>
+    <footer><span>© 2026 Montasir Fahim</span><span>Designed &amp; built with intent.</span><span class="footer-socials"><a href="https://www.linkedin.com/in/montasirfahim/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" ></i></a><a href="https://www.facebook.com/fahim.ffff" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="false"></i></a><a href="https://github.com/montasirfahim/Portfolio" target="_blank" rel="noreferrer">View source <i data-lucide="arrow-up-right"></i></a></span></footer>
     <script src="js/script.js"></script>
 </body>
 </html>
