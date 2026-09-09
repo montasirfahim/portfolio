@@ -4,7 +4,7 @@ A responsive, single-page developer portfolio for GitHub Pages. The site present
 
 ## Live Site
 
-[Visit the portfolio](https://montasirfahim.github.io/Portfolio/)
+[Visit the portfolio](https://montasirfahim.github.io/portfolio/)
 
 ## Highlights
 

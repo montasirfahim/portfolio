@@ -45,3 +45,6 @@
 .footer-socials > a[aria-label="Facebook"] { background: #1877f2; }
 .footer-socials > a[aria-label="LinkedIn"]:hover, .footer-socials > a[aria-label="Facebook"]:hover { color: #fff; transform: translateY(-2px); filter: brightness(1.15); }
 .footer-socials > a[aria-label="LinkedIn"] i, .footer-socials > a[aria-label="Facebook"] i { width: auto; font-size: 15px; line-height: 1; }
+
+/* Widen the centered desktop content by 0.5 inch on each side. */
+.nav-inner, .section-shell, footer { max-width: 1348px; }
